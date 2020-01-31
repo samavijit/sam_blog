@@ -4,7 +4,7 @@
                         <form action="{{ route('blog') }}">
                             
                                 <div class="input-group">
-                                    <input type="text" class="form-control input-lg" name="term" value="{{ request('term') }}" placeholder="Search for...">
+                                    <input type="text" class="form-control input-lg test" name="term" value="{{ request('term') }}" placeholder="Search for...">
                                     <span class="input-group-btn">
                                     <button class="btn btn-lg btn-default" type="submit">
                                     <i class="fa fa-search"></i>
