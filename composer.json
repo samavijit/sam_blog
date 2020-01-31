@@ -43,7 +43,11 @@
             "database/seeds",
             "database/factories"
         ],
-        "files": ["app/Helpers/permissions.php"]
+        "files": [
+
+            "app/Helpers/permissions.php",
+            "app/Helpers/date.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
