@@ -18,7 +18,7 @@
               <a href="{{ url('/home') }}"><i class="fa fa-dashboard"></i> Dashboard</a>
           </li>
           <li><a href="{{ route('backend.tags.index') }}">Tag</a></li>
-          <li class="active">Edit tag</li>
+          <li class="active">Edit Tag</li>
         </ol>
       </section>
 
