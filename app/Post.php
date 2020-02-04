@@ -65,7 +65,7 @@ class Post extends Model
 
     public static function archives()
     {
-        return static::selectRaw('count(id) as post_count,year(published_at) as year,month(published_at) as month')
+        return static::selectRaw('count(id) as post_count,extract(year from published_at) as year,extract(month from published_at) as month')
                         ->published()
                         ->groupBy('year','month')
                         ->orderByRaw('min(published_at) desc')
