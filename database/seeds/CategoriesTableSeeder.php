@@ -13,29 +13,48 @@ class CategoriesTableSeeder extends Seeder
     {
         //DB::table('categories')->truncate();
 
-        DB::table('categories')->insert([
-		 	[	
-                'title' => 'Web Design',
-                'slug' => 'web-design'
-            ],
-            [
-                'title' => 'Web Programming',
-                'slug' => 'web-web-programming'
-            ],
-            [
-                'title' => 'Internet',
-                'slug' => 'internet'
-            ],
-            [
-                'title' => 'Social Marketing',
-                'slug' => 'social-marketing'
-            ],
-            [
-                'title' => 'Photography',
-                'slug' => 'photography'
-            ],
+         if(env('APP_ENV') === 'local'){
 
-        ]);
+            DB::table('categories')->insert([
+    		 	[	
+                    'title' => 'Uncategorized',
+                    'slug' => 'uncategorized'
+                ],
+                [   
+                    'title' => 'Web Design',
+                    'slug' => 'web-design'
+                ],
+                [
+                    'title' => 'Web Programming',
+                    'slug' => 'web-web-programming'
+                ],
+                [
+                    'title' => 'Internet',
+                    'slug' => 'internet'
+                ],
+                [
+                    'title' => 'Social Marketing',
+                    'slug' => 'social-marketing'
+                ],
+                [
+                    'title' => 'Photography',
+                    'slug' => 'photography'
+                ],
+
+            ]);
+
+            
+         }else{
+
+              DB::table('categories')->insert([
+                [   
+                    'title' => 'Uncategorized',
+                    'slug' => 'uncategorized'
+                ]
+
+            ]);
+         }
+
 
         for($post_id=1;$post_id<=10;$post_id++){
 
