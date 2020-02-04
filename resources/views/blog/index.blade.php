@@ -52,7 +52,7 @@
                 @endforeach
 
                 <nav>
-                     {{ $posts->appends(request()->only(['term','month','year']))->links() }}
+                   
                 </nav>
 
                
