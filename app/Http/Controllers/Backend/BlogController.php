@@ -122,6 +122,8 @@ class BlogController extends BackendController
         //dd($postRequest);
         $post_request = $this->handle_request($request);
 
+        $post_request['view_count'] = 0;
+
         $user = $request->user();
         $user->posts()->create($post_request);
 
@@ -136,7 +138,7 @@ class BlogController extends BackendController
 
         $postRequest = $request->all();
         $postRequest['slug'] = str_slug($request->title , "-");
-        //$postRequest['view_count'] = 0;
+       // $postRequest['view_count'] = 0;
 
         if($request->hasFile('image')){
 
