@@ -134,6 +134,20 @@
 					</div>
 
 					<div class="box">
+						<div class="box-header with-border">
+							<h3 class="box-title">Category</h3>
+						</div>
+						<div class="box-body">
+
+							<div class="form-group">
+								<label for="title">Tags</label>
+								<input type="text" name="post_tags" value="{{ old('post_tags')  }}" class="form-control" placeholder="Blog Title">
+							
+							</div>
+						</div>
+					</div>
+
+					<div class="box">
 						 <div class="box-header with-border">
 		                        <h3 class="box-title">Feature Image</h3>
 		                    </div>
